@@ -56,7 +56,7 @@ class VQA2Dataset(MMFDataset):
                 "text": sample_info["question_str"],
             }
         else:
-            text_processor_argument = {"text": sample_info["question"]}
+            text_processor_argument = {"text": sample_info["question_str"]}
 
         processed_question = self.text_processor(text_processor_argument)
 
